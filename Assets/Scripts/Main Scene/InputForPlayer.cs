@@ -4,11 +4,11 @@ using UnityEngine;
 
 [RequireComponent(typeof(PlayerAnimations), typeof(PlayerMovement))]
 
-public class UserInput : MonoBehaviour
+public class InputForPlayer : MonoBehaviour
 {
     private PlayerAnimations _playerAnimations;
     private PlayerMovement _playerMovement;
-
+    
 
     private void Start()
     {
@@ -40,6 +40,7 @@ public class UserInput : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Space)) _playerMovement.Jump();
 
         else _playerAnimations.SetIdleAnimation();
+
     }
 
     private void EveryFrameInputHandling()

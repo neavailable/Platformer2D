@@ -24,10 +24,7 @@ namespace UI
 
         private void ChangeImageColor(int colorIndex)
         {
-            Debug.Log(colorIndex);
-            Debug.Log(_colors[colorIndex]);
             _image.color = _colors[colorIndex];
-            Debug.Log(_image.color );
         }
         
         private void OnDisable()
