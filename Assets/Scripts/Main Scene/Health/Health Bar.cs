@@ -45,7 +45,6 @@ namespace Health
                 _healthImage.fillAmount + range > _hpTarget
             )
             {
-                Debug.Log(_healthImage.fillAmount);
                 return;
             }
             
