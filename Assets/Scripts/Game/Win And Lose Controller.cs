@@ -6,12 +6,12 @@ namespace Game
     public class WinAndLoseController : MonoBehaviour
     {
         [SerializeField] private GameObject _gameOverUI;
-        [SerializeField] private Player.Player _player;
+        [SerializeField] private Player.HP _playerHP;
         
 
         private void OnEnable()
         {
-            _player.PlayerDeath += GameOver;
+            _playerHP.PlayerDead += GameOver;
         }
         
         private void Start()
@@ -27,7 +27,7 @@ namespace Game
 
         private void OnDisable()
         {
-            _player.PlayerDeath -= GameOver;
+            _playerHP.PlayerDead -= GameOver;
         }
     }	
 }
