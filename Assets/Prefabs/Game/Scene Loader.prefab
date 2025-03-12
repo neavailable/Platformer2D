@@ -46,5 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startGame: {fileID: 0}
   _aboutUs: {fileID: 0}
+  _shop: {fileID: 0}
   _mainScene: {fileID: 102900000, guid: 8c9cfa26abfee488c85f1582747f6a02, type: 3}
   _aboutUsScene: {fileID: 102900000, guid: f73bdfaff89487941801dc3ed7ae2f15, type: 3}
+  _shopScene: {fileID: 102900000, guid: cc73b11af9b55714fb1a5f5070079666, type: 3}

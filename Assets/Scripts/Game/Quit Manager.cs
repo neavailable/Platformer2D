@@ -10,17 +10,18 @@ namespace Game
 
         private void OnEnable()
         {
-            _quitGame.GameQuited += QuitGame;
+            _quitGame.GameQuit += QuitGame;
         }
 
         private void QuitGame()
         {
             Debug.Log("Quit Game");
+            Application.Quit();
         }
         
         private void OnDisable()
         {
-            _quitGame.GameQuited -= QuitGame;
+            _quitGame.GameQuit -= QuitGame;
         }
     }	
 }

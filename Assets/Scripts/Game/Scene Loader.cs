@@ -16,7 +16,7 @@ namespace Game
         private void OnEnable()
         {
             _startGame.GameStarted += LoadMainScene;
-            _aboutUs.ShowAboutUs   += LoadAboutUsScene;
+            _aboutUs.LoadAboutUs   += LoadAboutUsScene;
         }
 
         private void LoadMainScene()
@@ -32,7 +32,7 @@ namespace Game
         private void OnDisable()
         {
             _startGame.GameStarted -= LoadMainScene;
-            _aboutUs.ShowAboutUs   -= LoadAboutUsScene;
+            _aboutUs.LoadAboutUs   -= LoadAboutUsScene;
         }
     }	
 }

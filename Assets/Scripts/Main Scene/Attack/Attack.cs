@@ -1,20 +1,17 @@
-using System;
-using System.Collections;
 using UnityEngine;
+using Enemy;
+using UnityEngine.Serialization;
 
 
-namespace Enemy
+namespace Attack
 {
     [RequireComponent(typeof(PursuePlayer))]
     
-    public class Attack : MonoBehaviour
+    public class Attack : BaseAttack
     {
-        public Action<int> DamagePlayer;
-        
         [Range(10, 20), SerializeField] private int _damage;
         private PursuePlayer _pursuePlayer;
-        private const int _damageAnimationDuration = 1;
-        private float currentTime;
+        private const int _attackAnimationDuration = 1;
 
 
         private void OnEnable()
@@ -25,9 +22,9 @@ namespace Enemy
         
         private void StartAttacking()
         {
-            if (Time.time - currentTime < _damageAnimationDuration) return;
+            if (Time.time - CurrentTime < _attackAnimationDuration) return;
 
-            currentTime = Time.time;
+            CurrentTime = Time.time;
                 
             DamagePlayer?.Invoke(_damage);
         }

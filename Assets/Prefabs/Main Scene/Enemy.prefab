@@ -140,7 +140,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.18994427, y: -0.041181207}
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a58b00ba0a4af40459c078821737d152, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
+  _speed: 2.8
 --- !u!114 &-7418571503708144740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,4 +205,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bb1c6dbcfab41c449a86b269161d4be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 16
+  _damage: 10

@@ -6,12 +6,12 @@ namespace UI
 {
     public class QuitGame : MonoBehaviour
     {
-        public Action GameQuited;
+        public Action GameQuit;
 
 
-        public void GameQuit()
+        public void OnGameQuit()
         {
-            GameQuited?.Invoke();
+            GameQuit?.Invoke();
         }
     }	
 }

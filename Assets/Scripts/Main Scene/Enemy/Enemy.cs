@@ -1,9 +1,4 @@
 using UnityEngine;
 
 
-namespace Enemy
-{
-    public class Enemy : MonoBehaviour
-    {
-    }	
-}
+namespace Enemy { public class Enemy : MonoBehaviour { } }

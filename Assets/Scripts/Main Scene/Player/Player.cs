@@ -1,10 +1,4 @@
-using System;
 using UnityEngine;
 
 
-namespace Player
-{
-    public class Player : MonoBehaviour
-    {
-    }
-}
+namespace Player { public class Player : MonoBehaviour { } }

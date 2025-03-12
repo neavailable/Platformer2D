@@ -24,23 +24,15 @@ namespace Enemy
             _foundPlayer = false;
         }
         
-        private void OnTriggerStay2D(Collider2D other)
+        private void OnCollisionStay2D(Collision2D collision)
         {
-            if (other.TryGetComponent<Player.Player>(out Player.Player _))
+            if (collision.gameObject.TryGetComponent<Player.Player>(out Player.Player _))
             {
                 _foundPlayer = true;
                 FoundPlayer?.Invoke();
             }
         }
         
-        private void OnTriggerExit2D(Collider2D other)
-        {
-            if (other.TryGetComponent<Player.Player>(out Player.Player _))
-            {
-                _foundPlayer = false;
-            }
-        }
-
         private void GoToPlayer()
         {
             float newX = Vector2.MoveTowards

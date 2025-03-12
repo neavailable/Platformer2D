@@ -6,12 +6,12 @@ namespace UI
 {
     public class AboutUs : MonoBehaviour
     {
-        public Action ShowAboutUs;
+        public Action LoadAboutUs;
         
 
-        public void ShowInformationAboutUs()
+        public void OnLoadAboutUs()
         {
-            ShowAboutUs?.Invoke();
+            LoadAboutUs?.Invoke();
         }
     }	
 }

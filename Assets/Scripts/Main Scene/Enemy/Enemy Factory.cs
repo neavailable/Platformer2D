@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using HP;
 
 
 namespace Enemy
@@ -10,7 +11,7 @@ namespace Enemy
         [SerializeField] private Transform _firstSpawnPoint, _secondSpawnPoint;
         [SerializeField] private Transform _playerTransform;
         [Range(2, 4), SerializeField] private int _enemiesInWave;
-        [Range(7f, 10f), SerializeField] private float _breakBetweenWaves;
+        [Range(7f, 30f), SerializeField] private float _breakBetweenWaves;
         
 
         private void Start()
@@ -30,15 +31,12 @@ namespace Enemy
         
         private IEnumerator InstantiateEnemies()
         {
-            float randomValue;
-            Vector3 randomPosition;
-
             while (true)
             {
                 for (int i = 0; i < _enemiesInWave; ++i)
                 {
-                    randomValue = Random.Range(0f, 1f);
-                    randomPosition = Vector3.Lerp
+                    float randomValue = Random.Range(0f, 1f);
+                    Vector3 randomPosition = Vector3.Lerp
                     (
                         _firstSpawnPoint.position,
                         _secondSpawnPoint.position,
@@ -48,11 +46,11 @@ namespace Enemy
                     GameObject enemy = InstantiateEnemy(randomPosition);
                     
                     PursuePlayer pursuePlayer = enemy.GetComponent<PursuePlayer>();
-                    Player.HP playerHP = _playerTransform.GetComponent<Player.HP>();
-                    Attack enemyAttack = enemy.GetComponent<Attack>();
+                    Hp playerPlayerHp = _playerTransform.GetComponent<Hp>();
+                    Attack.Attack enemyAttack = enemy.GetComponent<Attack.Attack>();
                     
                     pursuePlayer.Constructor(_playerTransform);
-                    playerHP.Constructor(enemyAttack);
+                    playerPlayerHp.Constructor(enemyAttack);
                 }
                 
 
@@ -60,5 +58,4 @@ namespace Enemy
             }
         }
     }	
-    
 }
