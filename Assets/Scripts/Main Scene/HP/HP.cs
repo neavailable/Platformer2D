@@ -36,7 +36,7 @@ namespace HP
         
         private void OnDisable()
         {
-            _attackPlayer.DamagePlayer -= GetDamage;
+            if (_attackPlayer) _attackPlayer.DamagePlayer -= GetDamage;
         }
     }	
 }

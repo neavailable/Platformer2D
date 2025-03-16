@@ -6,14 +6,13 @@ using UnityEngine;
 namespace Player
 {
     [RequireComponent(typeof(SpriteRenderer), typeof(Animator))]
-    [RequireComponent(typeof(Inventory))]
         
     public class PlayerAnimations : MonoBehaviour
     {
+        [SerializeField] private Inventory.Inventory _inventory;
         private const float _attackAnimationTime = 0.5f;
         private Animator _animator;
         private SpriteRenderer _spriteRenderer;
-        private Inventory _inventory;
         private States _currentState;
         private Weapons _currentWeapon;
         private float _currentTime;
@@ -50,7 +49,6 @@ namespace Player
         
         private void OnEnable()
         {
-            _inventory = GetComponent<Inventory>();
             _inventory.ChangedWeapon += SetCurrentWeapon;
         }
         

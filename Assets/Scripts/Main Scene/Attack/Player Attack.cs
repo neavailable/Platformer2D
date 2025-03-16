@@ -3,19 +3,12 @@ using UnityEngine;
 
 
 namespace Attack
-{
-    [RequireComponent(typeof(Inventory))]
-    
+{    
     public class PlayerAttack : BaseAttack
     {
-        private Inventory _inventory;
+        [SerializeField] private Inventory.Inventory _inventory;
         private const float _attackAnimationTime = 0.5f;
 
-
-        private void Start()
-        {
-            _inventory = GetComponent<Inventory>();
-        }
         
         public void Attack()
         {

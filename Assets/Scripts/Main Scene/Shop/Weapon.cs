@@ -5,6 +5,7 @@ namespace Shop
 {
     public abstract class Weapon : MonoBehaviour
     {
+        public Sprite icon;
         public int Price { get; protected set; }
         public int Damage { get; protected set; }
 
